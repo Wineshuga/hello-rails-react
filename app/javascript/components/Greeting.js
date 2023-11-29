@@ -14,7 +14,7 @@ const Greeting = () => {
   }
 
   return (
-    <h1>{ message }</h1>
+    <h1>{ message.greeting }</h1>
   )
 }
 export default Greeting
