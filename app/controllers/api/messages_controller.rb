@@ -8,6 +8,6 @@ class Api::MessagesController < ApplicationController
   private
 
   def set_random_message
-    @random_message = Message.order("RANDOM()").first
+    @random_message = Message.order('RANDOM()').first
   end
 end
