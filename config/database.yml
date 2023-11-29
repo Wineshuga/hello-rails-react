@@ -1,0 +1,26 @@
+# Postgresql. Versions 3.8.0 and up are supported.
+#
+#   Ensure the postgresql gem is defined in your Gemfile
+#   gem "pg"
+#
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  port: 5433
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres
+  password: Nweneary_96
+  host: localhost
+
+development:
+  <<: *default
+  database: hello_rails_react_development
+
+test:
+  <<: *default
+  database: hello_rails_react_test
+
+production:
+  <<: *default
+  database: hello_rails_react_production
