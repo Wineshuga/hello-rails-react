@@ -13,7 +13,6 @@ const url = 'http://localhost:3000/api/random_greeting'
 export const getMessage = createAsyncThunk('message/getMessage', async (_ ,thunkAPI) => {
   try {
     const response = await axios(url)
-    console.log(response.data)
     return response.data;
   } catch (error) {
     const errorMsg = `${error.code}: ${error.message}`;
